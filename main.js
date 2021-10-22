@@ -76,6 +76,8 @@ class Scene {
         model.layers.set(0);
         line.layers.set(1);
 
+        model.scale.set(2, 2, 2);
+
         this.modelGroup.add(model);
         this.modelGroup.add(line);
         this.scene.add(this.modelGroup);
@@ -144,12 +146,9 @@ function loadModel() {
         console.log(item, loaded, total);
 
     var loader = new THREE.OBJLoader(manager);
-    loader.load(
-        "https://assets.codepen.io/557388/1405+Plane_1.obj",
-        function (obj) {
-            object = obj;
-        }
-    );
+    loader.load("./rocket.obj", function (obj) {
+        object = obj;
+    });
 }
 
 function setupAnimation(model) {
