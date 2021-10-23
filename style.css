@@ -146,10 +146,20 @@ canvas {
     opacity: 0;
 }
 .content .sunset {
-    background: url("https://assets.codepen.io/557388/sunset-reduced.jpg")
-        no-repeat top center;
+    /* background: url("https://assets.codepen.io/557388/sunset-reduced.jpg")
+        no-repeat top center; */
+    height: 200vh;
     background-size: cover;
     transform-origin: top center;
+    position: relative;
+    overflow: hidden;
+}
+.fin {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    font-size: 3vw;
+    transform: translate(-50%, -20%);
 }
 .content h1,
 .content h2 {
@@ -182,4 +192,335 @@ canvas {
 #line-wingspan,
 #circle-phalange {
     opacity: 0;
+}
+
+.sunset-cont {
+    position: sticky;
+    top: 0;
+    min-width: 100vw;
+    height: 100vh;
+    padding-left: 0px !important;
+}
+.row {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+}
+.bg {
+    fill: #ffeab5;
+}
+.day {
+    position: absolute !important;
+    top: 0;
+}
+.day svg {
+    height: 180px;
+    width: 180px;
+}
+.sun {
+    opacity: 0.79;
+    fill: url(#XMLID_3_);
+}
+.waves {
+    height: 100vh;
+    margin: auto;
+    overflow: hidden;
+    perspective: 800px;
+    position: relative;
+    max-width: 1600px;
+}
+.ocean,
+.sky {
+    position: absolute;
+}
+.sky {
+    background: linear-gradient(#de5b018a, #de780052, #f6a70038 65%);
+    width: 100%;
+    height: 100%;
+}
+.ocean {
+    background: linear-gradient(#fc9c5463 60%, #54d5fcbf);
+    height: 100px;
+    width: 100%;
+    top: 320px;
+}
+.ground {
+    height: 100vh;
+    position: relative;
+}
+.ground #arizona {
+    position: absolute;
+    top: 20%;
+    width: 150%;
+}
+.animation {
+    position: absolute;
+    bottom: 50%;
+    transform: rotate(21deg);
+}
+.animation svg {
+    width: 330px;
+}
+.palm,
+.palm-body {
+    animation: animateOne 10s 0.5s ease infinite;
+}
+.palm {
+    fill: #b4c06a;
+}
+.palm-body {
+    fill: #a39274;
+}
+@keyframes animateOne {
+    0% {
+        transform: translateZ(0px) translateY(0) translateX(0) skewY(0deg);
+    }
+    25% {
+        transform: translateZ(5px) translateY(5px) translateX(5px) skewY(5deg);
+    }
+    50% {
+        transform: translateZ(-5px) translateY(-5px) translateX(-5px)
+            skewY(5deg);
+    }
+    75% {
+        transform: translateZ(5px) translateY(5px) translateX(5px) skewY(5deg);
+    }
+    100% {
+        transform: translateZ(0px) translateY(0px) translateX(0px) skewY(0deg);
+    }
+}
+
+.sun-set {
+    position: absolute !important;
+    top: 0;
+    z-index: -10;
+}
+.sun-set svg {
+    position: fixed;
+}
+
+.bird {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg);
+    background-size: auto 100%;
+    width: 88px;
+    height: 125px;
+    will-change: background-position;
+    -webkit-animation-name: fly-cycle;
+    animation-name: fly-cycle;
+    -webkit-animation-timing-function: steps(10);
+    animation-timing-function: steps(10);
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+.bird--one {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-delay: -0.5s;
+    animation-delay: -0.5s;
+}
+.bird--two {
+    -webkit-animation-duration: 0.9s;
+    animation-duration: 0.9s;
+    -webkit-animation-delay: -0.75s;
+    animation-delay: -0.75s;
+}
+.bird--three {
+    -webkit-animation-duration: 1.25s;
+    animation-duration: 1.25s;
+    -webkit-animation-delay: -0.25s;
+    animation-delay: -0.25s;
+}
+.bird--four {
+    -webkit-animation-duration: 1.1s;
+    animation-duration: 1.1s;
+    -webkit-animation-delay: -0.5s;
+    animation-delay: -0.5s;
+}
+
+.bird-container {
+    position: absolute;
+    top: 20%;
+    left: -10%;
+    -webkit-transform: scale(0) translateX(-10vw);
+    transform: scale(0) translateX(-10vw);
+    will-change: transform;
+    -webkit-animation-name: fly-right-one;
+    animation-name: fly-right-one;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+.bird-container--one {
+    -webkit-animation-duration: 15s;
+    animation-duration: 15s;
+    -webkit-animation-delay: 0;
+    animation-delay: 0;
+}
+.bird-container--two {
+    -webkit-animation-duration: 16s;
+    animation-duration: 16s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+.bird-container--three {
+    -webkit-animation-duration: 14.6s;
+    animation-duration: 14.6s;
+    -webkit-animation-delay: 9.5s;
+    animation-delay: 9.5s;
+}
+.bird-container--four {
+    -webkit-animation-duration: 16s;
+    animation-duration: 16s;
+    -webkit-animation-delay: 10.25s;
+    animation-delay: 10.25s;
+}
+
+@-webkit-keyframes fly-cycle {
+    100% {
+        background-position: -900px 0;
+    }
+}
+
+@keyframes fly-cycle {
+    100% {
+        background-position: -900px 0;
+    }
+}
+@-webkit-keyframes fly-right-one {
+    0% {
+        -webkit-transform: scale(0.3) translateX(-10vw);
+        transform: scale(0.3) translateX(-10vw);
+    }
+    10% {
+        -webkit-transform: translateY(2vh) translateX(10vw) scale(0.4);
+        transform: translateY(2vh) translateX(10vw) scale(0.4);
+    }
+    20% {
+        -webkit-transform: translateY(0vh) translateX(30vw) scale(0.5);
+        transform: translateY(0vh) translateX(30vw) scale(0.5);
+    }
+    30% {
+        -webkit-transform: translateY(4vh) translateX(50vw) scale(0.6);
+        transform: translateY(4vh) translateX(50vw) scale(0.6);
+    }
+    40% {
+        -webkit-transform: translateY(2vh) translateX(70vw) scale(0.6);
+        transform: translateY(2vh) translateX(70vw) scale(0.6);
+    }
+    50% {
+        -webkit-transform: translateY(0vh) translateX(90vw) scale(0.6);
+        transform: translateY(0vh) translateX(90vw) scale(0.6);
+    }
+    60% {
+        -webkit-transform: translateY(0vh) translateX(110vw) scale(0.6);
+        transform: translateY(0vh) translateX(110vw) scale(0.6);
+    }
+    100% {
+        -webkit-transform: translateY(0vh) translateX(110vw) scale(0.6);
+        transform: translateY(0vh) translateX(110vw) scale(0.6);
+    }
+}
+@keyframes fly-right-one {
+    0% {
+        -webkit-transform: scale(0.3) translateX(-10vw);
+        transform: scale(0.3) translateX(-10vw);
+    }
+    10% {
+        -webkit-transform: translateY(2vh) translateX(10vw) scale(0.4);
+        transform: translateY(2vh) translateX(10vw) scale(0.4);
+    }
+    20% {
+        -webkit-transform: translateY(0vh) translateX(30vw) scale(0.5);
+        transform: translateY(0vh) translateX(30vw) scale(0.5);
+    }
+    30% {
+        -webkit-transform: translateY(4vh) translateX(50vw) scale(0.6);
+        transform: translateY(4vh) translateX(50vw) scale(0.6);
+    }
+    40% {
+        -webkit-transform: translateY(2vh) translateX(70vw) scale(0.6);
+        transform: translateY(2vh) translateX(70vw) scale(0.6);
+    }
+    50% {
+        -webkit-transform: translateY(0vh) translateX(90vw) scale(0.6);
+        transform: translateY(0vh) translateX(90vw) scale(0.6);
+    }
+    60% {
+        -webkit-transform: translateY(0vh) translateX(110vw) scale(0.6);
+        transform: translateY(0vh) translateX(110vw) scale(0.6);
+    }
+    100% {
+        -webkit-transform: translateY(0vh) translateX(110vw) scale(0.6);
+        transform: translateY(0vh) translateX(110vw) scale(0.6);
+    }
+}
+@-webkit-keyframes fly-right-two {
+    0% {
+        -webkit-transform: translateY(-2vh) translateX(-10vw) scale(0.5);
+        transform: translateY(-2vh) translateX(-10vw) scale(0.5);
+    }
+    10% {
+        -webkit-transform: translateY(0vh) translateX(10vw) scale(0.4);
+        transform: translateY(0vh) translateX(10vw) scale(0.4);
+    }
+    20% {
+        -webkit-transform: translateY(-4vh) translateX(30vw) scale(0.6);
+        transform: translateY(-4vh) translateX(30vw) scale(0.6);
+    }
+    30% {
+        -webkit-transform: translateY(1vh) translateX(50vw) scale(0.45);
+        transform: translateY(1vh) translateX(50vw) scale(0.45);
+    }
+    40% {
+        -webkit-transform: translateY(-2.5vh) translateX(70vw) scale(0.5);
+        transform: translateY(-2.5vh) translateX(70vw) scale(0.5);
+    }
+    50% {
+        -webkit-transform: translateY(0vh) translateX(90vw) scale(0.45);
+        transform: translateY(0vh) translateX(90vw) scale(0.45);
+    }
+    51% {
+        -webkit-transform: translateY(0vh) translateX(110vw) scale(0.45);
+        transform: translateY(0vh) translateX(110vw) scale(0.45);
+    }
+    100% {
+        -webkit-transform: translateY(0vh) translateX(110vw) scale(0.45);
+        transform: translateY(0vh) translateX(110vw) scale(0.45);
+    }
+}
+@keyframes fly-right-two {
+    0% {
+        -webkit-transform: translateY(-2vh) translateX(-10vw) scale(0.5);
+        transform: translateY(-2vh) translateX(-10vw) scale(0.5);
+    }
+    10% {
+        -webkit-transform: translateY(0vh) translateX(10vw) scale(0.4);
+        transform: translateY(0vh) translateX(10vw) scale(0.4);
+    }
+    20% {
+        -webkit-transform: translateY(-4vh) translateX(30vw) scale(0.6);
+        transform: translateY(-4vh) translateX(30vw) scale(0.6);
+    }
+    30% {
+        -webkit-transform: translateY(1vh) translateX(50vw) scale(0.45);
+        transform: translateY(1vh) translateX(50vw) scale(0.45);
+    }
+    40% {
+        -webkit-transform: translateY(-2.5vh) translateX(70vw) scale(0.5);
+        transform: translateY(-2.5vh) translateX(70vw) scale(0.5);
+    }
+    50% {
+        -webkit-transform: translateY(0vh) translateX(90vw) scale(0.45);
+        transform: translateY(0vh) translateX(90vw) scale(0.45);
+    }
+    51% {
+        -webkit-transform: translateY(0vh) translateX(110vw) scale(0.45);
+        transform: translateY(0vh) translateX(110vw) scale(0.45);
+    }
+    100% {
+        -webkit-transform: translateY(0vh) translateX(110vw) scale(0.45);
+        transform: translateY(0vh) translateX(110vw) scale(0.45);
+    }
 }

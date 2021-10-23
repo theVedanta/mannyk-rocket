@@ -62,24 +62,27 @@ class Scene {
         this.onResize();
         window.addEventListener("resize", this.onResize, false);
 
-        var edges = new THREE.EdgesGeometry(model.children[0].geometry);
-        let line = new THREE.LineSegments(edges);
-        line.material.depthTest = false;
-        line.material.opacity = 0.5;
-        line.material.transparent = true;
-        line.position.x = 0.5;
-        line.position.z = -1;
-        line.position.y = 0.2;
-
         this.modelGroup = new THREE.Group();
 
+        for (let child of model.children) {
+            var edges = new THREE.EdgesGeometry(child.geometry);
+            let line = new THREE.LineSegments(edges);
+            line.material.depthTest = false;
+            line.material.opacity = 0.5;
+            line.material.transparent = true;
+            line.position.x = 0.5;
+            line.position.z = -1;
+            line.position.y = 0.2;
+            line.layers.set(1);
+            line.scale.set(2, 2, 2);
+            this.modelGroup.add(line);
+        }
+
         model.layers.set(0);
-        line.layers.set(1);
 
         model.scale.set(2, 2, 2);
 
         this.modelGroup.add(model);
-        this.modelGroup.add(line);
         this.scene.add(this.modelGroup);
     }
 
@@ -146,9 +149,20 @@ function loadModel() {
         console.log(item, loaded, total);
 
     var loader = new THREE.OBJLoader(manager);
-    loader.load("./rocket.obj", function (obj) {
-        object = obj;
-    });
+    const mtlLoader = new THREE.MTLLoader();
+    mtlLoader.load(
+        "https://thevedanta.github.io/mannyk-rocket/rocket.mtl",
+        function (materials) {
+            materials.preload();
+
+            loader.load(
+                "https://thevedanta.github.io/mannyk-rocket/rocket.obj",
+                function (obj) {
+                    object = obj;
+                }
+            );
+        }
+    );
 }
 
 function setupAnimation(model) {
@@ -166,7 +180,7 @@ function setupAnimation(model) {
 
     let tau = Math.PI * 2;
 
-    gsap.set(plane.rotation, { y: tau * -0.25 });
+    gsap.set(plane.rotation, { y: tau * 1, z: tau * 0.25 });
     gsap.set(plane.position, { x: 80, y: -32, z: -60 });
 
     scene.render();

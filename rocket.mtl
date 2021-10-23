@@ -20,7 +20,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd space shuttle textures\\shuttle.jpg
+map_Kd https://thevedanta.github.io/mannyk-rocket/space%20shuttle%20textures/shuttle.jpg
 
 newmtl lambert11
 Ns 179.999996
@@ -61,7 +61,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd space shuttle textures\\bottom thing.jpg
+map_Kd https://thevedanta.github.io/mannyk-rocket/space%20shuttle%20textures/bottom%20thing.jpg
 
 newmtl lambert16
 Ns 179.999996
@@ -162,7 +162,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd space shuttle textures\\fuel tank.jpg
+map_Kd https://thevedanta.github.io/mannyk-rocket/space%20shuttle%20textures/fuel tank.jpg
 
 newmtl lambert29
 Ns 179.999996
@@ -203,7 +203,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd space shuttle textures\\shuttle.jpg
+map_Kd https://thevedanta.github.io/mannyk-rocket/space%20shuttle%20textures/shuttle.jpg
 
 newmtl lambert7
 Ns 179.999996
@@ -214,7 +214,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd space shuttle textures\\wing_left.jpg
+map_Kd https://thevedanta.github.io/mannyk-rocket/space%20shuttle%20textures/wing_left.jpg
 
 newmtl lambert9
 Ns 179.999996
@@ -225,4 +225,4 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd space shuttle textures\\tail.jpg
+map_Kd https://thevedanta.github.io/mannyk-rocket/space%20shuttle%20textures/tail.jpg
