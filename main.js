@@ -132,11 +132,19 @@ function loadModel() {
 
     function onModelLoaded() {
         object.traverse(function (child) {
+            // let mat = new THREE.MeshPhongMaterial({
+            //     color: 0x171511,
+            //     specular: 0xd0cbc7,
+            //     shininess: 5,
+            //     flatShading: true,
+            // });
+            const textureLoader = new THREE.TextureLoader();
+            textureLoader.crossOrigin = "Anonymous";
+            const myTexture = textureLoader.load(
+                "https://thevedanta.github.io/mannyk-rocket/space%20shuttle%20textures/shuttle.jpg"
+            );
             let mat = new THREE.MeshPhongMaterial({
-                color: 0x171511,
-                specular: 0xd0cbc7,
-                shininess: 5,
-                flatShading: true,
+                map: myTexture,
             });
             child.material = mat;
         });
