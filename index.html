@@ -6,37 +6,85 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>MannyK</title>
         <link rel="stylesheet" href="./style.css" />
+        <link rel="stylesheet" href="./kong.css" />
+        <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+        />
     </head>
     <body>
+        <div id="mega-wrap">
+            <div id="wrap">
+                <div class="head">
+                    <div class="face"></div>
+                    <div class="face"></div>
+                    <div class="face"></div>
+                    <div class="face"></div>
+                    <div class="face"></div>
+                    <div class="face"></div>
+                </div>
+                <div class="arms1">
+                    <div class="face"></div>
+                    <div class="face"></div>
+                    <div class="face"></div>
+                    <div class="face"></div>
+                    <div class="face"></div>
+                    <div class="face"></div>
+                    <div class="face"></div>
+                    <div class="face"></div>
+                    <div class="face"></div>
+                    <div class="face"></div>
+                </div>
+                <div class="leg1">
+                    <div class="face"></div>
+                    <div class="face"></div>
+                    <div class="face"></div>
+                </div>
+                <div class="leg2"></div>
+            </div>
+        </div>
+
         <div class="content">
             <div class="loading">Loading...</div>
             <div class="trigger"></div>
             <div class="section">
-                <h1>Zeus Money Rocket.</h1>
-                <h3>Easy Way To Booming Trades.</h3>
-                <p>Here's how to Earn doing nothing.</p>
+                <h1 data-aos="fade-up">Zeus Money Rocket.</h1>
+                <h3 data-aos="fade-up" data-delay="200">
+                    Easy Way To Booming Trades.
+                </h3>
+                <p data-aos="fade-up" data-delay="600">
+                    Here's how to Earn doing nothing.
+                </p>
                 <div class="scroll-cta">Scroll</div>
             </div>
 
-            <div class="section right">
-                <h2>It's a High Tech Trading Robot…</h2>
+            <div class="section right" data-aos="fade-up">
+                <h2 data-aos="fade-up">It's a High Tech Trading Robot…</h2>
             </div>
 
             <div class="ground-container">
                 <div class="parallax ground"></div>
                 <div class="section right">
-                    <h2>...With market up-to-date algorithms.</h2>
-                    <p>Guesss what ?</p>
+                    <h2 data-aos="fade-up">
+                        ...With market up-to-date algorithms.
+                    </h2>
+                    <p data-aos="fade-up" data-delay="400">Guesss what ?</p>
                 </div>
 
                 <div class="section">
-                    <h2>It trades lucratively on automation.</h2>
-                    <p>Each Trade!!</p>
+                    <h2 data-aos="fade-up">
+                        It trades lucratively on automation.
+                    </h2>
+                    <p data-aos="fade-up" data-delay="400">Each Trade!!</p>
                 </div>
 
                 <div class="section right">
-                    <h2>You Can Earn Without Any Experience.</h2>
-                    <p>Yes It's possible!</p>
+                    <h2 data-aos="fade-up">
+                        You Can Earn Without Any Experience.
+                    </h2>
+                    <p data-aos="fade-up" data-delay="400">
+                        Yes It's possible!
+                    </p>
                 </div>
                 <div class="parallax clouds"></div>
             </div>
@@ -66,24 +114,32 @@
                     ></circle>
                 </svg>
                 <div class="section dark">
-                    <h2>The facts and figures.</h2>
-                    <p>Lets get into the nitty gritty...</p>
+                    <h2 data-aos="fade-up">The facts and figures.</h2>
+                    <p data-aos="fade-up" data-delay="400">
+                        Lets get into the nitty gritty...
+                    </p>
                 </div>
                 <div class="section dark length">
-                    <h2>License Available</h2>
-                    <p>Only 5000 Worldwide</p>
+                    <h2 data-aos="fade-up">License Available</h2>
+                    <p data-aos="fade-up" data-delay="400">
+                        Only 5000 Worldwide
+                    </p>
                 </div>
                 <div class="section dark wingspan">
-                    <h2>Profit Per Month</h2>
-                    <p>50%</p>
+                    <h2 data-aos="fade-up">Profit Per Month</h2>
+                    <p data-aos="fade-up" data-delay="400">50%</p>
                 </div>
                 <div class="section dark phalange">
-                    <h2>Including</h2>
-                    <p>Expert Advice With Automation</p>
+                    <h2 data-aos="fade-up">Including</h2>
+                    <p data-aos="fade-up" data-delay="400">
+                        Expert Advice With Automation
+                    </p>
                 </div>
                 <div class="section dark">
-                    <h2>You Can Earn</h2>
-                    <p>Even While Sleeping</p>
+                    <h2 data-aos="fade-up">You Can Earn</h2>
+                    <p data-aos="fade-up" data-delay="400">
+                        Even While Sleeping
+                    </p>
                 </div>
                 <!-- 		<div class="section"></div> -->
             </div>
@@ -94,7 +150,7 @@
                     <ul class="credits"></ul>
                 </div> -->
 
-                <h1 class="fin">Fin.</h1>
+                <!-- <h1 class="fin">Fin.</h1> -->
 
                 <div class="sunset-cont">
                     <div class="row">
@@ -195,14 +251,15 @@
                                         style="stop-color: #fa8607"
                                     ></stop>
                                 </linearGradient>
-                                <ellipse
+                                <div class="sun"></div>
+                                <!-- <ellipse
                                     id="XMLID_1_"
                                     class="sun"
                                     cx="200"
                                     cy="135.7"
                                     rx="86.7"
                                     ry="89.5"
-                                ></ellipse>
+                                ></ellipse> -->
                                 <g>
                                     <g></g>
                                 </g>
@@ -2631,6 +2688,7 @@
         <script src="https://unpkg.com/three@0.117.1/examples/js/loaders/MTLLoader.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <!-- <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin3.min.js"></script> -->
         <script src="./main.js"></script>
     </body>

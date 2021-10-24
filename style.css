@@ -148,10 +148,10 @@ canvas {
 .content .sunset {
     /* background: url("https://assets.codepen.io/557388/sunset-reduced.jpg")
         no-repeat top center; */
-    height: 200vh;
+    height: 140vh;
     background-size: cover;
     transform-origin: top center;
-    position: relative;
+    position: sticky;
     overflow: hidden;
 }
 .fin {
@@ -195,7 +195,7 @@ canvas {
 }
 
 .sunset-cont {
-    position: sticky;
+    position: static;
     top: 0;
     min-width: 100vw;
     height: 100vh;
@@ -218,9 +218,21 @@ canvas {
     height: 180px;
     width: 180px;
 }
+.sun-set {
+    width: 100vw;
+    height: 100%;
+}
 .sun {
-    opacity: 0.79;
-    fill: url(#XMLID_3_);
+    opacity: 1;
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom, #fa709a 0%, #fee140 100%);
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
 }
 .waves {
     height: 100vh;
@@ -236,14 +248,14 @@ canvas {
 }
 .sky {
     background: linear-gradient(#de5b018a, #de780052, #f6a70038 65%);
-    width: 100%;
+    width: 100vw;
     height: 100%;
 }
 .ocean {
     background: linear-gradient(#fc9c5463 60%, #54d5fcbf);
     height: 100px;
     width: 100%;
-    top: 320px;
+    top: 90vh;
 }
 .ground {
     height: 100vh;

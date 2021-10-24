@@ -74,13 +74,13 @@ class Scene {
             line.position.z = -1;
             line.position.y = 0.2;
             line.layers.set(1);
-            line.scale.set(2, 2, 2);
+            // line.scale.set(2, 2, 2);
             this.modelGroup.add(line);
         }
 
         model.layers.set(0);
 
-        model.scale.set(2, 2, 2);
+        // model.scale.set(2, 2, 2);
 
         this.modelGroup.add(model);
         this.scene.add(this.modelGroup);
@@ -163,12 +163,9 @@ function loadModel() {
         function (materials) {
             materials.preload();
 
-            loader.load(
-                "https://thevedanta.github.io/mannyk-rocket/rocket.obj",
-                function (obj) {
-                    object = obj;
-                }
-            );
+            loader.load("./rocket.obj", function (obj) {
+                object = obj;
+            });
         }
     );
 }
@@ -188,7 +185,7 @@ function setupAnimation(model) {
 
     let tau = Math.PI * 2;
 
-    gsap.set(plane.rotation, { y: tau * 1, z: tau * 0.25 });
+    gsap.set(plane.rotation, { y: tau * -0.15 });
     gsap.set(plane.position, { x: 80, y: -32, z: -60 });
 
     scene.render();
@@ -247,7 +244,7 @@ function setupAnimation(model) {
     });
 
     gsap.to("#line-length", {
-        opacity: 1,
+        // opacity: 1,
         // drawSVG: 100,
         scrollTrigger: {
             trigger: ".length",
@@ -258,7 +255,7 @@ function setupAnimation(model) {
     });
 
     gsap.to("#line-wingspan", {
-        opacity: 1,
+        // opacity: 1,
         // drawSVG: 100,
         scrollTrigger: {
             trigger: ".wingspan",
@@ -269,7 +266,7 @@ function setupAnimation(model) {
     });
 
     gsap.to("#circle-phalange", {
-        opacity: 1,
+        // opacity: 1,
         // drawSVG: 100,
         scrollTrigger: {
             trigger: ".phalange",
@@ -332,12 +329,12 @@ function setupAnimation(model) {
 
     tl.to(
         plane.rotation,
-        { x: tau * 0.25, y: 0, z: -tau * 0.05, ease: "power1.inOut" },
+        { x: tau * 0.25, y: 1, z: -tau * 0.05, ease: "power1.inOut" },
         delay
     );
     tl.to(
         plane.position,
-        { x: -40, y: 0, z: -60, ease: "power1.inOut" },
+        { x: -80, y: 0, z: -60, ease: "power1.inOut" },
         delay
     );
 
@@ -345,7 +342,7 @@ function setupAnimation(model) {
 
     tl.to(
         plane.rotation,
-        { x: tau * 0.25, y: 0, z: tau * 0.05, ease: "power3.inOut" },
+        { x: tau * 0.2, y: 0.6, z: tau * 0.05, ease: "power3.inOut" },
         delay
     );
     tl.to(plane.position, { x: 40, y: 0, z: -60, ease: "power2.inOut" }, delay);
@@ -354,7 +351,7 @@ function setupAnimation(model) {
 
     tl.to(
         plane.rotation,
-        { x: tau * 0.2, y: 0, z: -tau * 0.1, ease: "power3.inOut" },
+        { x: tau * 0.3, y: 2, z: -tau * 0.1, ease: "power3.inOut" },
         delay
     );
     tl.to(
@@ -365,7 +362,7 @@ function setupAnimation(model) {
 
     delay += sectionDuration;
 
-    tl.to(plane.rotation, { x: 0, z: 0, y: tau * 0.25 }, delay);
+    tl.to(plane.rotation, { x: 0, z: 0, y: 2.2 }, delay);
     tl.to(plane.position, { x: 0, y: -10, z: 50 }, delay);
 
     delay += sectionDuration;
@@ -373,16 +370,21 @@ function setupAnimation(model) {
 
     tl.to(
         plane.rotation,
-        { x: tau * 0.25, y: tau * 0.5, z: 0, ease: "power4.inOut" },
+        { x: 1.7, y: 3.92, z: 0, ease: "power4.inOut" },
         delay
     );
-    tl.to(plane.position, { z: 30, ease: "power4.inOut" }, delay);
+    tl.to(plane.position, { x: 30, z: 30, ease: "power4.inOut" }, delay);
 
     delay += sectionDuration;
 
+    // tl.to(
+    //     plane.rotation,
+    //     { x: tau * 0.25, y: tau * 0.5, z: 0, ease: "power4.inOut" },
+    //     delay
+    // );
     tl.to(
         plane.rotation,
-        { x: tau * 0.25, y: tau * 0.5, z: 0, ease: "power4.inOut" },
+        { x: 1.7, y: 3.92, z: 0, ease: "power4.inOut" },
         delay
     );
     tl.to(plane.position, { z: 60, x: 30, ease: "power4.inOut" }, delay);
@@ -394,15 +396,11 @@ function setupAnimation(model) {
         { x: tau * 0.35, y: tau * 0.75, z: tau * 0.6, ease: "power4.inOut" },
         delay
     );
-    tl.to(plane.position, { z: 100, x: 20, y: 0, ease: "power4.inOut" }, delay);
+    tl.to(plane.position, { z: 60, x: 20, y: 0, ease: "power4.inOut" }, delay);
 
     delay += sectionDuration;
 
-    tl.to(
-        plane.rotation,
-        { x: tau * 0.15, y: tau * 0.85, z: -tau * 0, ease: "power1.in" },
-        delay
-    );
+    tl.to(plane.rotation, { x: 3, y: 3, z: 3, ease: "power1.in" }, delay);
     tl.to(plane.position, { z: -150, x: 0, y: 0, ease: "power1.inOut" }, delay);
 
     delay += sectionDuration;
@@ -411,9 +409,9 @@ function setupAnimation(model) {
         plane.rotation,
         {
             duration: sectionDuration,
-            x: -tau * 0.05,
-            y: tau,
-            z: -tau * 0.1,
+            x: 3.2,
+            y: 2,
+            z: 3,
             ease: "none",
         },
         delay
@@ -432,3 +430,16 @@ function setupAnimation(model) {
 }
 
 loadModel();
+
+AOS.init({
+    duration: 1000,
+    easing: "ease",
+});
+
+// KONG
+let root = document.documentElement;
+
+root.addEventListener("mousemove", (e) => {
+    root.style.setProperty("--mouse-x", e.clientX / 5 + "deg");
+    root.style.setProperty("--mouse-y", e.clientY / -50 - 10 + "deg");
+});
