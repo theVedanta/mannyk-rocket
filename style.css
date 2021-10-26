@@ -389,6 +389,19 @@ canvas {
     animation-delay: 10.25s;
 }
 
+/* LOGO */
+.logo {
+    width: 100vw;
+    height: 100vh;
+}
+.logo canvas {
+    transform: rotate(90deg) !important;
+    position: static !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* KEYFRAMES */
 @-webkit-keyframes fly-cycle {
     100% {
         background-position: -900px 0;
