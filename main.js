@@ -459,7 +459,7 @@ function initLogo() {
     // logoScene.add(logoCube);
 
     const loader = new THREE.OBJLoader();
-    let mat = new THREE.MeshBasicMaterial({ color: "#13ae4b" });
+    let mat = new THREE.MeshBasicMaterial({ color: "#d4af37" });
 
     loader.load(
         "https://thevedanta.github.io/mannyk-rocket/logo.obj",
@@ -492,9 +492,17 @@ function onWindowResizeLogo() {
 
 window.addEventListener("resize", onWindowResizeLogo, false);
 
+window.addEventListener("scroll", () => {
+    if (window.scrollY > window.innerHeight / 3) {
+        document.querySelector(".logo canvas").style.opacity = "0";
+    } else {
+        document.querySelector(".logo canvas").style.opacity = "1";
+    }
+});
+
 document.querySelector(".logo").addEventListener("mousemove", (e) => {
-    logoModel.rotation.x = (window.innerWidth - e.clientX) * 0.006;
-    logoModel.rotation.z = (window.innerHeight - e.clientY) * 0.0006 + 50;
+    logoModel.rotation.x = (window.innerWidth - e.clientX) * 0.004;
+    logoModel.rotation.z = (window.innerHeight - e.clientY) * 0.0008 + 50;
 });
 
 initLogo();
