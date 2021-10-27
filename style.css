@@ -240,7 +240,7 @@ canvas {
     overflow: hidden;
     perspective: 800px;
     position: relative;
-    max-width: 1600px;
+    width: 100vw;
 }
 .ocean,
 .sky {
@@ -258,6 +258,7 @@ canvas {
     top: 90vh;
 }
 .ground {
+    width: 100vw;
     height: 100vh;
     position: relative;
 }
