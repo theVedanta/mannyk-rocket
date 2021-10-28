@@ -488,7 +488,7 @@ function initLogo() {
 const makeAnimationFrame = () => {
     requestAnimationFrame(makeAnimationFrame);
     logoModel.scale.set(0.0025, 0.0025, 0.0025);
-    logoModel.rotation.x += 0.04;
+    logoModel.rotation.x += 0.02;
     logoRenderer.render(logoScene, logoCam);
 };
 
